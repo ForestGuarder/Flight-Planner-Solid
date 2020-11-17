@@ -10,9 +10,7 @@ namespace Flight_Planner.Data
         {
             Database.SetInitializer<FlightPlannerDbContext>(null);
 
-            //Gold line vvvvv
             Database.SetInitializer<FlightPlannerDbContext>(new MigrateDatabaseToLatestVersion<FlightPlannerDbContext,Configuration>());
-            //Gold Line ^^^^^
         }
 
         public DbSet<Flight> Flights { get; set; }
